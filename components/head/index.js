@@ -1,6 +1,8 @@
 import React from 'react'
 import NextHead from 'next/head'
 import { string } from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
+import './index.css'
 
 const defaultDescription = ''
 const defaultOGURL = ''
@@ -9,7 +11,7 @@ const defaultOGImage = ''
 const Head = props => (
   <NextHead>
     <meta charSet="UTF-8" />
-    <title>{props.title || ''}</title>
+    <title>{props.title || 'GGG'}</title>
     <meta
       name="description"
       content={props.description || defaultDescription}
@@ -33,6 +35,7 @@ const Head = props => (
     <meta property="og:image:height" content="630" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
   </NextHead>
 )
 
@@ -43,4 +46,4 @@ Head.propTypes = {
   ogImage: string
 }
 
-export default Head
+export default withStyles(Head);
