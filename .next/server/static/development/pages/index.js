@@ -132,7 +132,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_16__);
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../routes */ "./routes.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./../../routes */ "./routes.js");
 /* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_routes__WEBPACK_IMPORTED_MODULE_18__);
 /* harmony import */ var postcss__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! postcss */ "postcss");
 /* harmony import */ var postcss__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(postcss__WEBPACK_IMPORTED_MODULE_19__);
@@ -267,7 +267,7 @@ function (_Component) {
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_16___default.a, null))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           className: classes.control
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_routes__WEBPACK_IMPORTED_MODULE_18__["Link"], {
-          route: "Login"
+          route: "login"
         }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_17___default.a, {
           color: "inherit"
         }, "Login"))))))
@@ -800,9 +800,9 @@ function (_Component) {
 var nextRoutes = __webpack_require__(/*! next-routes */ "next-routes");
 
 var routes = module.exports = nextRoutes();
-routes.add('pages/user/login', 'Login', 'pages/user/login');
-routes.add('Register', '/register');
-routes.add('blog', '/blog/:slug');
+routes.add('signin/login/index', '/login'); // routes.add('signin/Register', '/register')
+
+routes.add('user/blog', '/blog/:slug');
 routes.add('about', '/about-us/:foo(bar|baz)');
 
 /***/ }),
@@ -814,7 +814,7 @@ routes.add('about', '/about-us/:foo(bar|baz)');
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/drago/Desktop/garden/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! H:\garden\pages\index.js */"./pages/index.js");
 
 
 /***/ }),

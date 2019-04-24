@@ -10,7 +10,7 @@ import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import Button from '@material-ui/core/Button';
-import { Link, Router } from '../../routes'
+import { Link, Router } from './../../routes'
 import { comment } from 'postcss';
 
 const styles = theme => ({
@@ -111,7 +111,7 @@ class SearchAppBar extends  Component {
               
             </div>
             <div className={classes.control}>
-              <Link route='Login'>
+              <Link route='login' >
                 <Button color="inherit">Login</Button>
               </Link>
               
