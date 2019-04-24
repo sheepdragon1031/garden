@@ -130,8 +130,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Menu__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Menu__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @material-ui/icons/Search */ "@material-ui/icons/Search");
 /* harmony import */ var _material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var postcss__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! postcss */ "postcss");
-/* harmony import */ var postcss__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(postcss__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
+/* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../routes */ "./routes.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_routes__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var postcss__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! postcss */ "postcss");
+/* harmony import */ var postcss__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(postcss__WEBPACK_IMPORTED_MODULE_19__);
+
+
 
 
 
@@ -152,6 +158,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var styles = function styles(theme) {
+  var _title;
+
   return {
     root: {
       width: '100%'
@@ -163,11 +171,11 @@ var styles = function styles(theme) {
       marginLeft: -12,
       marginRight: 20
     },
-    title: Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])({
+    title: (_title = {
       display: 'none'
-    }, theme.breakpoints.up('sm'), {
+    }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(_title, theme.breakpoints.up('sm'), {
       display: 'block'
-    }),
+    }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])(_title, "paddingRight", theme.spacing.unit), _title),
     search: Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])({
       position: 'relative',
       borderRadius: theme.shape.borderRadius,
@@ -182,13 +190,16 @@ var styles = function styles(theme) {
       width: 'auto'
     }),
     searchIcon: {
-      width: theme.spacing.unit * 9,
+      width: theme.spacing.unit * 5,
       height: '100%',
-      position: 'absolute',
       pointerEvents: 'none',
+      position: 'absolute',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      right: theme.spacing.unit,
+      top: 0,
+      margin: 'auto'
     },
     inputRoot: {
       color: 'inherit',
@@ -196,17 +207,21 @@ var styles = function styles(theme) {
     },
     inputInput: Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_5__["default"])({
       paddingTop: theme.spacing.unit,
-      paddingRight: theme.spacing.unit,
+      paddingRight: theme.spacing.unit * 10,
       paddingBottom: theme.spacing.unit,
-      paddingLeft: theme.spacing.unit * 10,
+      paddingLeft: theme.spacing.unit,
       transition: theme.transitions.create('width'),
       width: '100%'
     }, theme.breakpoints.up('sm'), {
       width: 120,
       '&:focus': {
-        width: 200
+        width: 250
       }
-    })
+    }),
+    control: {
+      marginRight: 0,
+      marginLeft: 'auto'
+    }
   };
 };
 
@@ -249,7 +264,13 @@ function (_Component) {
           }
         }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
           className: classes.searchIcon
-        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_16___default.a, null))))))
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_icons_Search__WEBPACK_IMPORTED_MODULE_16___default.a, null))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: classes.control
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_routes__WEBPACK_IMPORTED_MODULE_18__["Link"], {
+          route: "Login"
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_17___default.a, {
+          color: "inherit"
+        }, "Login"))))))
       );
     }
   }]);
@@ -734,7 +755,28 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "root"
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_appbar_index__WEBPACK_IMPORTED_MODULE_9__["default"], null));
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_appbar_index__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_routes__WEBPACK_IMPORTED_MODULE_5__["Link"], {
+        route: "blog",
+        params: {
+          slug: 'hello-world'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", null, "Blog: Hello worlds"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_routes__WEBPACK_IMPORTED_MODULE_5__["Link"], {
+        route: "blog",
+        params: {
+          slug: 'another-blog-post'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", null, "Blog: Another blog post"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_routes__WEBPACK_IMPORTED_MODULE_5__["Link"], {
+        route: "blog",
+        params: {
+          slug: 'non-existant'
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", null, "Blog: Not found"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        onClick: function onClick() {
+          return _routes__WEBPACK_IMPORTED_MODULE_5__["Router"].pushRoute('about', {
+            foo: 'bar'
+          });
+        }
+      }, "About foo bars"))));
     }
   }]);
 
@@ -758,6 +800,8 @@ function (_Component) {
 var nextRoutes = __webpack_require__(/*! next-routes */ "next-routes");
 
 var routes = module.exports = nextRoutes();
+routes.add('pages/user/login', 'Login', 'pages/user/login');
+routes.add('Register', '/register');
 routes.add('blog', '/blog/:slug');
 routes.add('about', '/about-us/:foo(bar|baz)');
 
@@ -770,7 +814,7 @@ routes.add('about', '/about-us/:foo(bar|baz)');
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! H:\garden\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! /Users/drago/Desktop/garden/pages/index.js */"./pages/index.js");
 
 
 /***/ }),
@@ -783,6 +827,17 @@ module.exports = __webpack_require__(/*! H:\garden\pages\index.js */"./pages/ind
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/AppBar");
+
+/***/ }),
+
+/***/ "@material-ui/core/Button":
+/*!*******************************************!*\
+  !*** external "@material-ui/core/Button" ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@material-ui/core/Button");
 
 /***/ }),
 

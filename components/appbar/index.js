@@ -9,6 +9,8 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import Button from '@material-ui/core/Button';
+import { Link, Router } from '../../routes'
 import { comment } from 'postcss';
 
 const styles = theme => ({
@@ -27,6 +29,7 @@ const styles = theme => ({
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
+    paddingRight: theme.spacing.unit
   },
   search: {
     position: 'relative',
@@ -43,13 +46,16 @@ const styles = theme => ({
     },
   },
   searchIcon: {
-    width: theme.spacing.unit * 9,
+    width: theme.spacing.unit * 5,
     height: '100%',
-    position: 'absolute',
     pointerEvents: 'none',
+    position: 'absolute',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    right: theme.spacing.unit,
+    top: 0,
+    margin: 'auto',
   },
   inputRoot: {
     color: 'inherit',
@@ -57,18 +63,22 @@ const styles = theme => ({
   },
   inputInput: {
     paddingTop: theme.spacing.unit,
-    paddingRight: theme.spacing.unit,
+    paddingRight: theme.spacing.unit * 10,
     paddingBottom: theme.spacing.unit,
-    paddingLeft: theme.spacing.unit * 10,
+    paddingLeft: theme.spacing.unit ,
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
       width: 120,
       '&:focus': {
-        width: 200,
+        width: 250,
       },
     },
   },
+  control:{
+    marginRight: 0,
+    marginLeft: 'auto',
+  }
 });
 
 class SearchAppBar extends  Component {
@@ -87,6 +97,7 @@ class SearchAppBar extends  Component {
             </Typography>
             {/* <div className={classes.grow} /> */}
             <div className={classes.search}>
+
               <InputBase
                 placeholder="Search…"
                 classes={{
@@ -97,6 +108,13 @@ class SearchAppBar extends  Component {
               <div className={classes.searchIcon}>
                 <SearchIcon />
               </div>
+              
+            </div>
+            <div className={classes.control}>
+              <Link route='Login'>
+                <Button color="inherit">Login</Button>
+              </Link>
+              
             </div>
           </Toolbar>
         </AppBar>

@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div className="root" >
           <Appbar />
-          {/* <ul>
+           <ul>
             <li>
               <Link route='blog' params={{ slug: 'hello-world' }}>
                 <a>Blog: Hello worlds</a>
@@ -38,7 +38,7 @@ class App extends Component {
               </button>
             </li>
             
-          </ul> */}
+          </ul> 
           
       </div>
     );
