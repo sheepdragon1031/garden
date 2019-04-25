@@ -3,19 +3,14 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles'
 import Head from'../components/head/index'
 import Appbar from '../components/appbar/index'
+import Layout from './layout'
 const styles = ({
 
 })
 class App extends Component {
-  renderHead() {
-    return(
-      <Head />
-    )
-  }
   render() {
     return (
-      <div className="root" >
-          <Appbar />
+      <Layout>
            <ul>
             <li>
               <Link route='blog' params={{ slug: 'hello-world' }}>
@@ -40,7 +35,7 @@ class App extends Component {
             
           </ul> 
           
-      </div>
+      </Layout>
     );
   }
 }

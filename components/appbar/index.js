@@ -92,9 +92,11 @@ class SearchAppBar extends  Component {
             <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
               <MenuIcon />
             </IconButton>
-            <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-              Material-UI
-            </Typography>
+            <Link route='../'>
+              <Typography className={classes.title} variant="h6" color="inherit" noWrap>
+                Material-UI
+              </Typography>
+            </Link>
             {/* <div className={classes.grow} /> */}
             <div className={classes.search}>
 
@@ -111,7 +113,7 @@ class SearchAppBar extends  Component {
               
             </div>
             <div className={classes.control}>
-              <Link route='login' >
+              <Link route='../signin/login' >
                 <Button color="inherit">Login</Button>
               </Link>
               
